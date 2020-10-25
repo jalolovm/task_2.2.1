@@ -32,9 +32,9 @@ public class MainApp {
          System.out.println();
       }
 
-      User user = userService.getUserByCar("Toyota", 2020);
+      List<User> user = userService.getUserByCar("Toyota", 2020);
 
-//      System.out.println(user);
+      user.forEach(System.out::println);
       context.close();
    }
 }
