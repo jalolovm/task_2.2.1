@@ -1,7 +1,6 @@
 package hiber;
 
 import hiber.config.AppConfig;
-//import hiber.model.Car;
 import hiber.model.Car;
 import hiber.model.User;
 import hiber.service.UserService;
@@ -16,11 +15,11 @@ public class MainApp {
             new AnnotationConfigApplicationContext(AppConfig.class);
 
       UserService userService = context.getBean(UserService.class);
-//
-//      userService.add(new User("User1", "Lastname1", "user1@mail.ru", new Car("Skoda Oktavia", 2020)));
-//      userService.add(new User("User2", "Lastname2", "user2@mail.ru", new Car("VolksWagen", 2017)));
-//      userService.add(new User("User3", "Lastname3", "user3@mail.ru", new Car("Renault",2019)));
-//      userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("Toyota",2018)));
+
+      userService.add(new User("User1", "Lastname1", "user1@mail.ru", new Car("Skoda Oktavia", 2020)));
+      userService.add(new User("User2", "Lastname2", "user2@mail.ru", new Car("VolksWagen", 2017)));
+      userService.add(new User("User3", "Lastname3", "user3@mail.ru", new Car("Renault",2019)));
+      userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("Toyota",2018)));
 
       List<User> users = userService.listUsers();
       for (User user : users) {

@@ -14,9 +14,6 @@ public class Car {
     @Column
     private int series;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    private User user;
-
     public Car() {
     }
 
@@ -49,13 +46,6 @@ public class Car {
         this.id = id;
     }
 
-    //    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
 
     @Override
     public String toString() {

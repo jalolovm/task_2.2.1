@@ -1,6 +1,5 @@
 package hiber.dao;
 
-import hiber.model.Car;
 import hiber.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -28,7 +27,7 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
 
-   @Override  // доработать это строку
+   @Override
    public List <User> getUserByCar(String model, int series) {
       Query<User> query = sessionFactory.getCurrentSession()
               .createQuery("from User u where u.car.model = :model and u.car.series = :series");
